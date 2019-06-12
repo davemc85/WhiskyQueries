@@ -20,7 +20,7 @@ public class Whisky {
 
     @Column(name = "age")
     private int age;
-    @JsonIgnoreProperties("Whisky")
+
     @ManyToOne
     @JoinColumn(name = "distillery_id", nullable = false)
     private Distillery distillery;
