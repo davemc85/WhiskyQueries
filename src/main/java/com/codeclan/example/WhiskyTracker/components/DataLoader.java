@@ -54,7 +54,7 @@ public class DataLoader implements ApplicationRunner {
         distilleryRepository.save(distillery4);
 
         List<Whisky> foundWhiskybyYear = whiskyRepository.findWhiskyByYear(1995);
-        List<Distillery> foundDistillerybyRegion = distilleryRepository.findDistilleriesByRegion("Speyside");
+        List<Distillery> foundDistillerybyRegion = distilleryRepository.getDistilleriesFromRegion("Speyside");
         List<Whisky> foundWhiskyAgeDistillery = whiskyRepository.findWhiskyByAgeAndDistillery("Macallan", 25);
         List<Whisky> foundWhiskyByRegion = whiskyRepository.findWhiskyByRegion("Speyside");
     }

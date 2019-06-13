@@ -17,8 +17,13 @@ public class DistilleryController {
     @Autowired
     DistilleryRepository distilleryRepository;
 
-    @GetMapping(value = "/regions/{region}")
+    @GetMapping(value = "/region/{region}")
     public List<Distillery> getDistilleriesFromRegion(@PathVariable String region) {
         return distilleryRepository.getDistilleriesFromRegion(region);
+    }
+
+    @GetMapping(value = "/age/{age}")
+    public List<Distillery> distilleriesWithWhiskiesOfAge(@PathVariable int age){
+        return distilleryRepository.distilleriesWithWhiskiesOfAge(age);
     }
 }

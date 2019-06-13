@@ -8,4 +8,5 @@ import java.util.List;
 public interface DistilleryRepositoryCustom {
 
     List<Distillery> getDistilleriesFromRegion(String region);
+    List<Distillery> distilleriesWithWhiskiesOfAge(int age);
 }

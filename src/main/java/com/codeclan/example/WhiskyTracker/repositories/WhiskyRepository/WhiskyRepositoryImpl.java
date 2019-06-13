@@ -53,6 +53,8 @@ public class WhiskyRepositoryImpl implements WhiskyRepositoryCustom {
         } catch (HibernateException ex){
 
             ex.printStackTrace();
+        } finally {
+            session.close();
         }
         return result;
     }

@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface DistilleryRepository extends JpaRepository<Distillery, Long>, DistilleryRepositoryCustom {
-    List<Distillery> findDistilleriesByRegion(String region);
+
 }
